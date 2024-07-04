@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* header_area */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(/assets/image/Laptop\ Photo.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 3% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h3{
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.nav-menu{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-menu ul li{
+list-style: none;
+display: inline-block;
+margin: 0 12px;
+position: relative;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    color: rgb(74, 197, 25);
+    background-color: white;
+    padding: 6px 11px;
+    border-radius: 8px;
+}
+
+.nav-menu ul li::after{
+    content: "";
+    width: 0px;
+    height: 5px;
+    background: black;
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: -5px;
+}
+
+.nav-menu ul li:hover::after{
+    content: "";
+    width: 95%;
+    height: 5px;
+    background: black;
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: -5px;
+    transition: .5s;
+}
+
+.profile-image{
+    width: 20%;
+    position: absolute;
+    top: 42%;
+    left: 70%;
+    transform: translate(25%, -25%);
+}
+.titledescription{
+ width: 60%;
+ color: white;
+ position: absolute;
+ top: 50%;
+ left: 5%;
+ transform: translate(5%,-50%);
+}
+.titledescription h1{
+    font-size: 60px;
+}
+.titledescription p{
+    font-size: 18px;
+    margin: 10px 0 40px;
+    color: rgb(207, 207, 207);
+    font-weight: bold;
+}
+.titledescription a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    padding: 8px 13px;
+    border-radius: 8px;
+}
+.titledescription a:hover{
+    background: green;
+    transition: .6s;
+}
+nav span{
+display: none;
+}
+@media(max-width: 700px){
+    .titledescription{
+        width: 80%;
+        color: rgb(27, 197, 35);
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(5%,-50%);
+        text-align: center!important;
+       }
+       .titledescription h1{
+        font-size: 33px;
+    }
+    .titledescription p{
+        font-size: 18px;
+        margin: 10px 0 40px;
+        color: rgb(206, 18, 18);
+        font-weight: bold;
+        text-shadow: 
+            2px 2px 2px rgba(255, 0, 0, 0.3),   /* Red shadow with low opacity */
+            -2px -2px 2px rgba(133, 133, 195, 0.3);
+    }
+    nav span{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        }
+    .nav-menu{
+        position: absolute;
+        background: rgba(0,0,0,0.2);
+        height: 100vh;
+        width: 300px;
+        top: 0;
+        right: -300px;
+        text-align: left;
+        z-index: 1;
+        transition: 1s;
+     }
+     .nav-menu ul li{
+        display: block;
+        margin: 10px 0;
+     }
+     .nav-menu ul{
+        padding: 20px;
+     }
+     .profile-image{
+        width: 30%;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+    }
+}
